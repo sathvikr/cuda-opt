@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cuda_runtime.h>
-
-// Kernel function declaration
-__global__ void matmulKernel(float* A, float* B, float* C, int N);
+#include "./kernels/simple_kernel.cuh"
 
 int main() {
     int N = 1024; // Example size, can be adjusted
@@ -37,7 +35,34 @@ int main() {
                  (N + blockDim.y - 1) / blockDim.y);
 
     // Launch the kernel
-    matmulKernel<<<gridDim, blockDim>>>(d_A, d_B, d_C, N);
+    cudaEvent_t start, stop;
+    float milliseconds = 0;
+
+    // Create events
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
+    // Record the start event
+    cudaEventRecord(start);
+
+    // Launch the kernel
+    kernel<<<gridDim, blockDim>>>(d_A, d_B, d_C, N);
+
+    // Record the stop event
+    cudaEventRecord(stop);
+
+    // Wait for the stop event to complete
+    cudaEventSynchronize(stop);
+
+    // Calculate the elapsed time in milliseconds
+    cudaEventElapsedTime(&milliseconds, start, stop);
+
+    // Print the elapsed time
+    std::cout << "Kernel execution time: " << milliseconds << " ms" << std::endl;
+
+    // Destroy events
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
 
     // Copy result from device to host
     cudaMemcpy(h_C, d_C, size, cudaMemcpyDeviceToHost);

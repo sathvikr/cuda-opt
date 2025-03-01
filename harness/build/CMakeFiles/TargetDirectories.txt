@@ -1,3 +1,0 @@
-/home/ubuntu/cuda-opt/harness/build/CMakeFiles/harness_exe.dir
-/home/ubuntu/cuda-opt/harness/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/cuda-opt/harness/build/CMakeFiles/rebuild_cache.dir
