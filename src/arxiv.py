@@ -25,7 +25,7 @@ class ArxivClient:
         }
 
         prompt = f"""
-        Find arxiv papers to optimize the following CUDA kernel (using Tensor Cores if compute-bound):
+        Find arxiv papers to optimize the following CUDA kernel for Hopper GPUs (using Tensor Cores if the kernel iscompute-bound):
         <cuda>
         {cuda_code}
         </cuda>
