@@ -1,0 +1,62 @@
+2025-03-01 07:13:08,291 - __main__ - INFO - Starting CUDA optimization process
+2025-03-01 07:13:08,292 - src.loader - INFO - Reading CUDA file from: tests/matmul.cu
+2025-03-01 07:13:08,292 - src.opt - INFO - Starting CUDA kernel optimization
+2025-03-01 07:13:17,266 - src.arxiv - INFO - Saved PDF: papers2/1910.08498.pdf
+2025-03-01 07:13:22,685 - src.arxiv - WARNING - Skipping non-ArXiv URL: https://forums.developer.nvidia.com/t/subtle-problem-with-matrix-matrix-multiplication/159503
+2025-03-01 07:13:23,300 - src.arxiv - INFO - Saved PDF: papers2/2501.09398.pdf
+2025-03-01 07:13:23,480 - src.arxiv - WARNING - Skipping non-ArXiv URL: https://forums.developer.nvidia.com/t/matrix-multiply-with-shared-memory-works-too-slow-in-my-code/310594
+2025-03-01 07:13:24,115 - src.arxiv - INFO - Saved PDF: papers2/2303.12374.pdf
+2025-03-01 07:18:21,000 - src.opt - INFO - Successfully received optimized code from API
+2025-03-01 07:18:21,001 - src.loader - INFO - Writing CUDA file to: tests/matmul_opt.cu
+2025-03-01 07:18:21,002 - __main__ - INFO - CUDA optimization process completed successfully
+2025-03-01 07:21:30 |     INFO | 🚀 Starting CUDA optimization process
+2025-03-01 07:21:30 |     INFO | Reading CUDA file from: tests/matmul.cu
+2025-03-01 07:21:30 |     INFO | Starting optimization process...
+2025-03-01 07:21:30 |     INFO | 🔍 Searching for relevant papers...
+2025-03-01 07:21:40 |     INFO | 📄 Saved PDF: papers2/1910.08498.pdf
+2025-03-01 07:23:13 |  WARNING | ⚠️ Skipping non-ArXiv URL: https://forums.developer.nvidia.com/t/subtle-problem-with-matrix-matrix-multiplication/159503
+2025-03-01 07:23:15 |     INFO | 📄 Saved PDF: papers2/2501.09398.pdf
+2025-03-01 07:25:07 |     INFO | 🚀 Starting CUDA optimization process
+2025-03-01 07:25:07 |     INFO | 📖 Reading input CUDA kernel...
+2025-03-01 07:25:07 |     INFO | Reading CUDA file from: tests/matmul.cu
+2025-03-01 07:25:07 |     INFO | Starting optimization process (targeting 3 kernels)...
+2025-03-01 07:25:07 |     INFO | 🔍 Searching for relevant papers on ArXiv...
+2025-03-01 07:25:10 |    ERROR | Error searching ArXiv papers: 503 Server Error: Service Unavailable for url: https://api.perplexity.ai/chat/completions
+2025-03-01 07:25:10 |    ERROR | ❌ Error in optimization process: Failed to generate any optimized kernels
+2025-03-01 07:26:54 |     INFO | 🚀 Starting CUDA optimization process
+2025-03-01 07:26:54 |     INFO | 📖 Reading input CUDA kernel...
+2025-03-01 07:26:54 |     INFO | Reading CUDA file from: tests/matmul.cu
+2025-03-01 07:26:54 |     INFO | Starting optimization process (targeting 3 kernels)...
+2025-03-01 07:26:54 |     INFO | 🔍 Searching for relevant papers on ArXiv...
+2025-03-01 07:27:03 |     INFO | 
+📝 Processing paper 1/5
+2025-03-01 07:27:03 |     INFO | 📥 Downloading paper: 1910.08498.pdf
+2025-03-01 07:27:03 |     INFO | 📄 Extracting text from PDF...
+2025-03-01 07:27:09 |     INFO | ✓ Successfully processed paper (104196 chars extracted)
+2025-03-01 07:27:09 |     INFO | 🤖 Generating optimized kernel from paper...
+2025-03-01 07:28:10 |    ERROR | ❌ Network error: Expecting value: line 1 column 1 (char 0)
+2025-03-01 07:28:10 |     INFO | 
+📝 Processing paper 2/5
+2025-03-01 07:28:10 |  WARNING | ⚠️ Skipping non-ArXiv URL: https://forums.developer.nvidia.com/t/subtle-problem-with-matrix-matrix-multiplication/159503
+2025-03-01 07:28:10 |     INFO | 
+📝 Processing paper 3/5
+2025-03-01 07:28:10 |     INFO | 📥 Downloading paper: 2501.09398.pdf
+2025-03-01 07:28:10 |     INFO | 📄 Extracting text from PDF...
+2025-03-01 07:28:11 |     INFO | ✓ Successfully processed paper (38484 chars extracted)
+2025-03-01 07:28:11 |     INFO | 🤖 Generating optimized kernel from paper...
+2025-03-01 07:29:11 |    ERROR | ❌ Network error: Expecting value: line 1 column 1 (char 0)
+2025-03-01 07:29:11 |     INFO | 
+📝 Processing paper 4/5
+2025-03-01 07:29:11 |  WARNING | ⚠️ Skipping non-ArXiv URL: https://forums.developer.nvidia.com/t/matrix-multiply-with-shared-memory-works-too-slow-in-my-code/310594
+2025-03-01 07:29:11 |     INFO | 
+📝 Processing paper 5/5
+2025-03-01 07:29:11 |     INFO | 📥 Downloading paper: 2303.12374.pdf
+2025-03-01 07:29:12 |     INFO | 📄 Extracting text from PDF...
+2025-03-01 07:29:12 |     INFO | ✓ Successfully processed paper (55631 chars extracted)
+2025-03-01 07:29:12 |     INFO | 🤖 Generating optimized kernel from paper...
+2025-03-01 07:36:54 |     INFO | Successfully generated 1 optimized kernels
+2025-03-01 07:36:54 |     INFO | 
+💾 Saving optimized kernels...
+2025-03-01 07:36:54 |     INFO | Writing CUDA file to: tests/matmul_opt_1.cu
+2025-03-01 07:36:54 |     INFO | ✓ Saved kernel 1 to tests/matmul_opt_1.cu
+2025-03-01 07:36:54 |     INFO | ✨ CUDA optimization process completed successfully
