@@ -23,12 +23,20 @@ class ArxivClient:
             "Authorization": f"Bearer {self.perplexity_api_key}",
             "Content-Type": "application/json"
         }
+
+        prompt = f"""
+        Find arxiv papers to optimize the following CUDA kernel (using Tensor Cores if compute-bound):
+        <cuda>
+        {cuda_code}
+        </cuda>
+        Return the papers in a list of URLs.
+        """
         
         payload = {
             "model": "sonar",
             "messages": [
                 {"role": "system", "content": "You are an expert CUDA researcher."},
-                {"role": "user", "content": f"Find arxiv papers that will help an AI optimize the following CUDA kernel: {cuda_code}"}
+                {"role": "user", "content": prompt}
             ],
             "max_tokens": 500,
             "search_domain_filter": ["arxiv.org"],
