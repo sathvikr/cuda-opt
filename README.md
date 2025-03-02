@@ -1,19 +1,16 @@
-# CUDA Optimizer
+# DeepKernel
 
-A tool for optimizing CUDA kernels and analyzing GPU performance.
+A tool for optimizing CUDA kernels for Tensor cores to enhance developer productivity and power innovation.
 
 ## Overview
 
-CUDA Optimizer is a specialized tool designed to help developers optimize their CUDA kernels and improve GPU performance. It provides analysis, suggestions, and automated optimizations for CUDA code.
+DeepKernel is a specialized tool designed to help developers optimize their CUDA kernels and improve GPU performance. It provides analysis, suggestions, and automated optimizations for CUDA code.
 
 ## Features
 
-- Automatic kernel analysis
-- Performance bottleneck detection
-- Memory access pattern optimization
-- Thread block size optimization
-- Shared memory usage recommendations
-- Warp efficiency analysis
+- *Searches* state-of-the-art research to identify pathways for optimization
+- *Identifies* multiple candidate kernels before narrowing down to the optimal solution, combining exploration with efficiency
+- *Optimizes* kernel performance for Tensor cores, maximizing performance on modern GPUs
 
 ## Prerequisites
 
@@ -27,29 +24,18 @@ CUDA Optimizer is a specialized tool designed to help developers optimize their 
 Simply install using pip in editable mode:
 
 ```bash
-git clone https://github.com/yourusername/cuda-opt.git
+git clone https://github.com/sathvikr/cuda-opt.git
 cd cuda-opt
 pip install -e .
 ```
 
-That's it! Now you can use the `cuda-opt` command anywhere in your terminal.
-
 ## Usage
 
-1. Basic kernel analysis:
 ```bash
-cuda-opt analyze <kernel_file.cu>
+python driver.py -i <path to cuda kernel file> -o <output folder> -k <number of candidate kernels> -v <whether or not to enable verbose logging>
 ```
 
-2. Optimization suggestions:
-```bash
-cuda-opt optimize <kernel_file.cu>
-```
-
-3. Performance profiling:
-```bash
-cuda-opt profile <kernel_file.cu>
-```
+Running the above command will initiate DeepKernel optimization on a CUDA kernel of your choice.
 
 ## Example
 
@@ -139,18 +125,6 @@ Performance Improvement:
 └────────────────┴────────────┴─────────────┘
 ```
 
-## Configuration
-
-The tool can be configured using a `config.json` file in the project root directory. Example configuration:
-
-```json
-{
-  "analysis_level": "detailed",
-  "optimization_targets": ["memory", "occupancy", "arithmetic"],
-  "max_threads_per_block": 1024
-}
-```
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -162,4 +136,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For questions and support, please open an issue in the GitHub repository.
-
