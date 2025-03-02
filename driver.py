@@ -81,6 +81,7 @@ def main(input_file, output_dir, kernels, verbose):
         logger.info("📖 Reading input CUDA kernel...")
         cuda_code = file_handler.read_input()
         optimized_kernels = optimizer.optimize(cuda_code)
+        #optimized_kernel = optimizer.tree_of_thought(papers, cuda_code, nvcc_metrics, max_iterations: int = 2, branching_factor: int = 2, max_depth: int = 2)
         
         # Write kernels
         logger.info("\n💾 Saving optimized kernels...")
